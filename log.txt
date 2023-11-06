@@ -1,7 +1,10 @@
-2.Sep
-hab nicht weiter gemacht mit die kacke
+6. Nov
+test ob geht
 
-1. Sep
+2. Nov
+hab nicht weiter gemacht
+
+1. Nov
 mal eval sheet lesen dann hat man auch nochmal andere ideen
 hab versucht nach dem guide von medium die wp website zum laufen zu bringen aber docker
 fährt nicht hoch, weiter versuchen
