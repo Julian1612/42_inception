@@ -1,5 +1,7 @@
 # Dienstag 7. Nov
 - mariaDB docker file ergänzt um die database zu erstellen mit setup.sql (tools/)
+- habe mariadb und wordpress docker file und volume erstellt, docker fahren auch hoch
+- morgen mit nginx volume weiter machen und mit docker compose anfangen
 
 # Montag 6. Nov
 - to-dos und roadmap erstellt
