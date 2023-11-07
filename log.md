@@ -1,5 +1,5 @@
 # Dienstag 7. Nov
--
+- mariaDB docker file ergänzt um die database zu erstellen mit setup.sql (tools/)
 
 # Montag 6. Nov
 - to-dos und roadmap erstellt
