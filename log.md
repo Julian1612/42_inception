@@ -1,6 +1,23 @@
+############-WORKING-ROUTINE-############
+# Start working 9:00
+* Set 1 to 5 to-do’s for the working day
+* Check notes from day before
+90 minutes deep work
+# 60 minutes lunch break
+2 × 90 minutes deep work
+# Last 30 minutes
+* Write a log for the day
+* Push project
+# Finish work 17:00
+########################################
+# Mittwoch 8. Nov
+- nginx docker file erstellt und die .conf file erstmal so von alex übernommen (anpassen)
+- cotianer läuft auch für sich alleine
+
 # Dienstag 7. Nov
 - mariaDB docker file ergänzt um die database zu erstellen mit setup.sql (tools/)
 - habe mariadb und wordpress docker file und volume erstellt, docker fahren auch hoch
+aber config files sind wahrscheinlich noch nicht ganz richtig
 - morgen mit nginx volume weiter machen und mit docker compose anfangen
 
 # Montag 6. Nov
