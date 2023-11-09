@@ -10,8 +10,8 @@ RUN apt-get update -y &&\
 	apt-get clean &&\
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir -p /var/www/worpress
-WORKDIR /var/www/worpress
+RUN mkdir -p /var/www/wordpress
+WORKDIR /var/www/wordpress
 
 RUN	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
 	chmod +x wp-cli.phar
@@ -20,8 +20,7 @@ RUN mv wp-cli.phar /usr/local/bin/wp
 COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d
 COPY ./conf/wp-conf.php /var/www/wordpress
 
-COPY ./tools/setup.sh ./
-
+COPY ./tools/setup.sh ./setup.sh
 RUN chmod +x setup.sh
 
 EXPOSE 9000

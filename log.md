@@ -10,9 +10,19 @@
 * Push project
 # Finish work 17:00
 ########################################
+# Freitag 10. Nov
+
+# Donnerstag 9. Nov
+- versucht den docker compose zum laufe zu bringen aber es gibt nach wie vor probleme mit wordpress
+nochmal am besten den wordpress container durch check alle sribts etc und ihn alleine zum laufen bekommen
+vielleicht auch nochmal vergleichen was die unterschiede zu den anderen container sind
+
 # Mittwoch 8. Nov
-- nginx docker file erstellt und die .conf file erstmal so von alex übernommen (anpassen)
-- cotianer läuft auch für sich alleine
+- nginx docker file erstellt und die .conf file erstmal so von @todo = alex übernommen (anpassen)
+- cotianer laufen auch für sich alleine
+- docker compose fährt bis auf mariadb alle container hoch
+- es ist noch ein problem mit volum von maria db weshalb der docker compose nicht hoch fährt
+alle pfade nochmal überprüfen
 
 # Dienstag 7. Nov
 - mariaDB docker file ergänzt um die database zu erstellen mit setup.sql (tools/)

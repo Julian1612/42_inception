@@ -1,0 +1,66 @@
+version: '3.9'
+
+# @todo change driver_opts/device to the correct path
+volumes:
+  wp_volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/julianschneider/coding/42_inception/data/wp_volume
+  db_volume:
+    driver: local
+    driver_opts:
+      type: none
+      o: bind
+      device: /Users/julianschneider/coding/42_inception/data/db_volume
+
+# @todo check if the service section is similar to the template i god the info from (like setting env variables etc.)
+# @todo warum network localhost oder inception? what is the difference? what is the network doing ?
+# mariadb:    fred
+# nginx:      axel witzel
+# wordpress:  axel witzel
+services:
+  mariadb:
+      container_name: mariadb
+      image: mariadb-image
+      build: ./requirements/mariadb
+      networks:
+        - localhost
+      volumes:
+        - db_volume:/var/lib/mysql
+      restart: always
+  nginx:
+      container_name: nginx
+      image: nginx-image
+      build:
+        context: ./requirements/nginx
+      ports:
+        - "443:443"
+      networks:
+        - localhost
+      volumes:
+        - wp_volume:/var/www/wordpress
+      depends_on:
+        - wordpress
+      restart: always
+  wordpress:
+      container_name: wordpress
+      image: wordpress-image
+      build:
+        context: ./requirements/wordpress
+      env_file:
+        - .env
+      networks:
+        - localhost
+      volumes:
+        - wp_volume:/var/www/wordpress
+      depends_on:
+        - mariadb
+      restart: always
+
+
+
+#@todo rename this network to a more fitting name
+networks:
+  localhost: { }
