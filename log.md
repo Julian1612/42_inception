@@ -1,7 +1,8 @@
 ############-WORKING-ROUTINE-############
 # Start working 9:00
-* Set 1 to 5 to-do’s for the working day
 * Check notes from day before
+* Check git-hub roadmap
+* Set 1 to 5 to-do’s for the working day
 90 minutes deep work
 # 60 minutes lunch break
 2 × 90 minutes deep work
@@ -10,11 +11,14 @@
 * Push project
 # Finish work 17:00
 ########################################
+
+-------------------- WEEKEND --------------------
 # Freitag 10. Nov
+- habe alle volum und image files gelöscht und ein scribt geschrieben das das übernimmt jetzt fahren alle docker hoch aber konnte noch nicht mit dem local host auf die wordpress website zugreifen => gucken warum dass nicht geht
 
 # Donnerstag 9. Nov
-- versucht den docker compose zum laufe zu bringen aber es gibt nach wie vor probleme mit wordpress
-nochmal am besten den wordpress container durch check alle sribts etc und ihn alleine zum laufen bekommen
+- versucht den docker compose zum laufe zu bringen aber es gibt nach wie vor probleme mit wordpress container
+nochmal am besten den wordpress container durch check alle scripts etc und ihn alleine zum laufen bekommen
 vielleicht auch nochmal vergleichen was die unterschiede zu den anderen container sind
 
 # Mittwoch 8. Nov
