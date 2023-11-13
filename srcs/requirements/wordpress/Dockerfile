@@ -1,27 +1,35 @@
 FROM debian:buster
 
-RUN apt-get update -y &&\
-	apt-get install -y &&\
-	apt-get upgrade -y &&\
-	apt install -y php7.3 &&\
-	apt-get install -y mariadb-client &&\
-	apt-get install -y php7.3-fpm &&\
-	apt-get install -y curl &&\
-	apt-get clean &&\
-	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN apt-get update -y \
+    && apt-get install -y \
+        curl \
+        php7.3 \
+        php7.3-fpm \
+        php7.3-mysql \
+        mariadb-client \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN mkdir -p /var/www/wordpress
 WORKDIR /var/www/wordpress
 
-RUN	curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar && \
-	chmod +x wp-cli.phar
-RUN mv wp-cli.phar /usr/local/bin/wp
-
+# Copy your configuration files
 COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d
-COPY ./conf/wp-conf.php /var/www/wordpress
+# COPY ./conf/wp-config.php .
+COPY ./conf/wp-conf.php .
 
+# Copy the setup script
 COPY ./tools/setup.sh ./setup.sh
 RUN chmod +x setup.sh
+
+# Copy wp-cli to /usr/local/bin
+RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
+    && chmod +x wp-cli.phar \
+    && mv wp-cli.phar /usr/local/bin/wp
+
+# Check if wp-conf.php already exists, if not, copy it
+RUN [ -e wp-conf.php ] || cp wp-conf.php /var/www/wordpress/wp-conf.php
+
 
 EXPOSE 9000
 

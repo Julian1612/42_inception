@@ -11,6 +11,11 @@
 * Push project
 # Finish work 17:00
 ########################################
+# Montag 13. Nov
+- einfaches makefile erstellt dass das docker compose file ausführt und auch wieder runterfahren kann
+und auch eine clean rule die alle daten löscht
+- wenn docker hoch gefahren sind war es trotzdem nicth möglich zum localhost zu connecten habe an der
+wp docker rum gearbeitet aber fährt nicht wirklich hoch
 
 -------------------- WEEKEND --------------------
 # Freitag 10. Nov
