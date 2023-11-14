@@ -3,14 +3,20 @@
 * Check notes from day before
 * Check git-hub roadmap
 * Set 1 to 5 to-do’s for the working day
-90 minutes deep work
+# 60 - 90 minutes deep work
+* Light work and organizing
 # 60 minutes lunch break
-2 × 90 minutes deep work
+# 2 × 60 - 90 minutes deep work
+* Light work and organizing
 # Last 30 minutes
 * Write a log for the day
 * Push project
 # Finish work 17:00
 ########################################
+# Dienstag 14. Nov
+- habe das wp-conf.php umbenannt es wird jetzt auch gefunden aber ein andere error ist auf getreten:
+Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb` could not be established. This could mean your host’s database server is down.
+
 # Montag 13. Nov
 - einfaches makefile erstellt dass das docker compose file ausführt und auch wieder runterfahren kann
 und auch eine clean rule die alle daten löscht

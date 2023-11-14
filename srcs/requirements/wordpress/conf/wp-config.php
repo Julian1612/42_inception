@@ -39,8 +39,8 @@ define( 'DB_CHARSET', 'utf8' );
 define( 'DB_COLLATE', '' );
 
 
-define( 'WP_HOME', 'https://akurz.42.fr' );
-define( 'WP_SITEURL', 'https://akurz.42.fr' );
+define( 'WP_HOME', 'https://jschneid.42.fr' );
+define( 'WP_SITEURL', 'https://jschneid.42.fr' );
 
 /**#@+
  * Authentication unique keys and salts.

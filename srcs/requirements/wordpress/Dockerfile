@@ -16,7 +16,7 @@ WORKDIR /var/www/wordpress
 # Copy your configuration files
 COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d
 # COPY ./conf/wp-config.php .
-COPY ./conf/wp-conf.php .
+COPY ./conf/wp-config.php .
 
 # Copy the setup script
 COPY ./tools/setup.sh ./setup.sh
@@ -26,10 +26,6 @@ RUN chmod +x setup.sh
 RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
     && chmod +x wp-cli.phar \
     && mv wp-cli.phar /usr/local/bin/wp
-
-# Check if wp-conf.php already exists, if not, copy it
-RUN [ -e wp-conf.php ] || cp wp-conf.php /var/www/wordpress/wp-conf.php
-
 
 EXPOSE 9000
 
