@@ -27,7 +27,10 @@ services:
       build: ./requirements/mariadb
       volumes:
         - db_volume:/var/lib/mysql
+      networks:
+        - wp-net
       restart: always
+
   nginx:
       container_name: nginx
       image: nginx-image
@@ -39,7 +42,10 @@ services:
         - wp_volume:/var/www/wordpress
       depends_on:
         - wordpress
+      networks:
+        - wp-net
       restart: always
+
   wordpress:
       container_name: wordpress
       image: wordpress-image
@@ -51,7 +57,11 @@ services:
         - wp_volume:/var/www/wordpress
       depends_on:
         - mariadb
+      networks:
+        - wp-net
       restart: always
 
 #@todo rename this network to a more fitting name
-
+networks:
+  wp-net:
+      name: wp-net

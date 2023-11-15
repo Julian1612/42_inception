@@ -13,9 +13,14 @@
 * Push project
 # Finish work 17:00
 ########################################
+# Mitwoch 15. Nov
+-
+
 # Dienstag 14. Nov
 - habe das wp-conf.php umbenannt es wird jetzt auch gefunden aber ein andere error ist auf getreten:
 Error: Error establishing a database connection. This either means that the username and password information in your `wp-config.php` file is incorrect or that contact with the database server at `mariadb` could not be established. This could mean your host’s database server is down.
+- habe mit paul auch noch ein netzwerk im docker-compose file hinzugefügt
+- habe es gelöst mit paul aber kann mich nach wie vor nicht mit dem localhost verbinden
 
 # Montag 13. Nov
 - einfaches makefile erstellt dass das docker compose file ausführt und auch wieder runterfahren kann

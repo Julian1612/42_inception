@@ -1,5 +1,5 @@
 # To-Do today
-@todo connection mit dem local host herstellen
+@todo make it possible to host the wp website
 @todo Check container with the subject
 	- note down all requirements form subject
 	- check if all requirements are done
