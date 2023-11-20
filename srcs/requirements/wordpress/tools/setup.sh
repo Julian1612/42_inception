@@ -1,12 +1,38 @@
 #!/bin/bash
 
-wp core download --path=/var/www/wordpress --allow-root
-wp core install --url=$WP_URL \
-				--title=$WP_TITLE \
-				--admin_user=$WP_USER \
-				--admin_password=$WP_PASSWORD \
-				--admin_email=$WP_EMAIL \
-				--path=/var/www/wordpress --allow-root
+# change directory to /var/www/wordpress
+cd /var/www/wordpress
 
-mkdir -p /var/run/php
-php-fpm7.3 -F --fpm-config /etc/php/7.3/fpm/pool.d/www.conf
+# download wp
+wp core download --allow-root
+
+# create wp-config.php file and configure the wp instance to accept the MariaDB databank
+wp core config	\
+				--dbname=$WP_DB_NAME \
+				--dbuser=$WP_DB_USER \
+				--dbpass=$WP_DB_PASSWORD \
+				--dbhost=$WP_DB_HOST \
+				--allow-root
+
+# install the wp instance and set the admin user and general infos like title and url
+wp core install \
+				--admin_user=$WP_ADMIN_USER \
+				--admin_password=$WP_ADMIN_PASSWORD \
+				--admin_email=$WP_ADMIN_MAIL \
+				--title=$WP_TITLE \
+				--url=$WP_URL \
+				--allow-root
+
+# create the first non-admin user
+wp user create \
+				$WP_USER \
+				$WP_USER_MAIL \
+				--role=author \
+				--user_pass=$WP_USER_PASSWORD \
+				--allow-root
+
+# cd back to where you were before
+cd -
+
+# Start php-fpm to respond to FastCGI requests and force it to stay in the foreground
+php-fpm7.3 -F

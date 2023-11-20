@@ -10,7 +10,7 @@ RUN apt-get update -y &&\
 
 # Copy the configuration file
 COPY ./conf/50-server.cnf /etc/mysql/mariadb.conf.d
-COPY ./tools/setup.sql ./
+COPY ./tools/setup.sql /
 
 # Run the setup script
 RUN service mysql start &&\

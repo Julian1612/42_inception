@@ -10,23 +10,14 @@ RUN apt-get update -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-RUN mkdir -p /var/www/wordpress
-WORKDIR /var/www/wordpress
+RUN mkdir -p /etc/php/7.3/fpm
+COPY conf/www.conf /etc/php/7.3/fpm/pool.d
 
-# Copy your configuration files
-COPY ./conf/www.conf /etc/php/7.3/fpm/pool.d
-# COPY ./conf/wp-config.php .
-COPY ./conf/wp-config.php .
+RUN mkdir /run/php
 
-# Copy the setup script
-COPY ./tools/setup.sh ./setup.sh
-RUN chmod +x setup.sh
+RUN	curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar --output /usr/bin/wp --silent \
+&&	chmod +x ./usr/bin/wp
 
-# Copy wp-cli to /usr/local/bin
-RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar \
-    && chmod +x wp-cli.phar \
-    && mv wp-cli.phar /usr/local/bin/wp
-
-EXPOSE 9000
-
-ENTRYPOINT ["./setup.sh"]
+COPY ./tools/setup.sh /var/www/wordpress/setup.sh
+RUN chmod +x /var/www/wordpress/setup.sh
+ENTRYPOINT ["var/www/wordpress/setup.sh"]

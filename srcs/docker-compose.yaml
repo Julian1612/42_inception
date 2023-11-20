@@ -28,7 +28,7 @@ services:
       volumes:
         - db_volume:/var/lib/mysql
       networks:
-        - wp-net
+        - inception-net
       restart: always
 
   nginx:
@@ -43,7 +43,7 @@ services:
       depends_on:
         - wordpress
       networks:
-        - wp-net
+        - inception-net
       restart: always
 
   wordpress:
@@ -58,10 +58,9 @@ services:
       depends_on:
         - mariadb
       networks:
-        - wp-net
+        - inception-net
       restart: always
 
 #@todo rename this network to a more fitting name
 networks:
-  wp-net:
-      name: wp-net
+  inception-net:

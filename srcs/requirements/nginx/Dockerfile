@@ -7,7 +7,7 @@ RUN apt-get update -y &&\
 	apt-get clean &&\
 	rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-COPY ./conf/setup.conf /etc/nginx/sites-available/localhost
+COPY ./conf/nginx.conf /etc/nginx/sites-available/default
 
 RUN openssl req -newkey rsa:4096 \
 	-x509 \
