@@ -14,7 +14,8 @@
 # Finish work 17:00
 ########################################
 # Monatg 20. Nov
--
+- website is running but and the wp-config.php gets created
+- there is stil one error log: 2023-11-20 16:33:18 wordpress  | Error: The 'jschneid' username is already registered.
 
 NICHT GEPUSHT UND ALLE FORTSCHITTE VERLOREN
 # Mitwoch 15. Nov
