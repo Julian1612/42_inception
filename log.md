@@ -13,6 +13,10 @@
 * Push project
 # Finish work 17:00
 ########################################
+# Monatg 20. Nov
+-
+
+NICHT GEPUSHT UND ALLE FORTSCHITTE VERLOREN
 # Mitwoch 15. Nov
 -
 

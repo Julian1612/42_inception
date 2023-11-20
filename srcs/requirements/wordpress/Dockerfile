@@ -15,8 +15,8 @@ COPY conf/www.conf /etc/php/7.3/fpm/pool.d
 
 RUN mkdir /run/php
 
-RUN	curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar --output /usr/bin/wp --silent \
-&&	chmod +x ./usr/bin/wp
+RUN	curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar --output /usr/bin/wp --silent
+RUN	chmod +x ./usr/bin/wp
 
 COPY ./tools/setup.sh /var/www/wordpress/setup.sh
 RUN chmod +x /var/www/wordpress/setup.sh
