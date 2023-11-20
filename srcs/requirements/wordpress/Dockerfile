@@ -20,4 +20,4 @@ RUN	curl https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.ph
 
 COPY ./tools/setup.sh /var/www/wordpress/setup.sh
 RUN chmod +x /var/www/wordpress/setup.sh
-ENTRYPOINT ["var/www/wordpress/setup.sh"]
+ENTRYPOINT ["/var/www/wordpress/setup.sh"]

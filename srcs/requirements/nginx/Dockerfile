@@ -14,8 +14,8 @@ RUN openssl req -newkey rsa:4096 \
 	-sha256 \
 	-days 365 \
 	-nodes \
-	-out /etc/ssl/certs/localhost.crt \
-	-keyout /etc/ssl/private/localhost.key \
+	-out /etc/ssl/certs/nginx.crt \
+	-keyout /etc/ssl/private/nginx.key \
 	-subj "/CN=jschneid.42.fr"
 
 EXPOSE 443

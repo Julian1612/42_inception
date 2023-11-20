@@ -37,3 +37,4 @@ echo -e -n "${GREEN}All volumes are deleted ${NC}"
 sleep 2
 echo "               ✅"
 
+docker system prune -af
