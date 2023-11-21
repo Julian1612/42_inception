@@ -13,9 +13,14 @@
 * Push project
 # Finish work 17:00
 ############## WEEKLY-LOG ##############
+# Mittwoch 22. Nov
+-
+
 # Dienstag 21. Nov
 - dockers and wordpress is everything working so far
 - improved the makefile is working now
+- removed all the files i don't need anymore
+- seems like the project is working now as it should
 
 # Monatg 20. Nov
 - website is running but and the wp-config.php gets created
