@@ -1,4 +1,4 @@
-############-WORKING-ROUTINE-############
+############ WORKING-ROUTINE ############
 # Start working 9:00
 * Check notes from day before
 * Check git-hub roadmap
@@ -12,7 +12,11 @@
 * Write a log for the day
 * Push project
 # Finish work 17:00
-########################################
+############## WEEKLY-LOG ##############
+# Dienstag 21. Nov
+- dockers and wordpress is everything working so far
+- improved the makefile is working now
+
 # Monatg 20. Nov
 - website is running but and the wp-config.php gets created
 - there is stil one error log: 2023-11-20 16:33:18 wordpress  | Error: The 'jschneid' username is already registered.
