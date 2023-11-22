@@ -14,7 +14,8 @@
 # Finish work 17:00
 ############## WEEKLY-LOG ##############
 # Mittwoch 22. Nov
--
+- installed everything on the vm but its not starting up
+probably there is an error with the docker deamon or the docker compose maybe reinstall both and try again
 
 # Dienstag 21. Nov
 - dockers and wordpress is everything working so far
