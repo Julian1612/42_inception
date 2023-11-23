@@ -13,6 +13,10 @@
 * Push project
 # Finish work 17:00
 ############## WEEKLY-LOG ##############
+# Donnerstag 23. Nov
+- used docker compose to run the docker and got a more precise error message which showed me that the folder path was uppercase and it couldn't find
+- but there is still a problem with starting up and the mariadb image gets not created
+
 # Mittwoch 22. Nov
 - installed everything on the vm but its not starting up
 probably there is an error with the docker deamon or the docker compose maybe reinstall both and try again

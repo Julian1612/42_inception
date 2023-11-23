@@ -9,7 +9,7 @@ up:
 	@test -d $(DATA_DIR) || mkdir -p $(DATA_DIR)
 	@test -d $(WP_VOLUME_DIR) || mkdir -p $(WP_VOLUME_DIR)
 	@test -d $(DB_VOLUME_DIR) || mkdir -p $(DB_VOLUME_DIR)
-	@cd srcs && docker-compose up -d --build
+	@cd srcs && docker compose up -d --build
 	@printf "${GREEN}Docker Compose up completed successfully.${NC}\n"
 
 down:
