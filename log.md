@@ -13,6 +13,11 @@
 * Push project
 # Finish work 17:00
 ############## WEEKLY-LOG ##############
+# Freitag 24. Nov
+- mashine is starting up as aspected when its stated with "sudo make up" (alsways use sudo or in the root)
+- changed the file path for data to /home/jschneid/data
+- checked with eval sheet everything is working and the
+
 # Donnerstag 23. Nov
 - used docker compose to run the docker and got a more precise error message which showed me that the folder path was uppercase and it couldn't find
 - but there is still a problem with starting up and the mariadb image gets not created

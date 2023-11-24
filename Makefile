@@ -1,7 +1,7 @@
 GREEN=\033[0;32m
 NC=\033[0m
 
-DATA_DIR := data
+DATA_DIR := /home/jschneid/data
 WP_VOLUME_DIR := $(DATA_DIR)/wp_volume
 DB_VOLUME_DIR := $(DATA_DIR)/db_volume
 
@@ -9,7 +9,7 @@ up:
 	@test -d $(DATA_DIR) || mkdir -p $(DATA_DIR)
 	@test -d $(WP_VOLUME_DIR) || mkdir -p $(WP_VOLUME_DIR)
 	@test -d $(DB_VOLUME_DIR) || mkdir -p $(DB_VOLUME_DIR)
-	@cd srcs && docker compose up -d --build
+	@cd srcs && docker-compose up -d --build
 	@printf "${GREEN}Docker Compose up completed successfully.${NC}\n"
 
 down:
