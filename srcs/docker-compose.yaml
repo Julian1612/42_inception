@@ -3,7 +3,6 @@ version: '3.9'
 networks:
   inception-net:
 
-# @todo change driver_opts/device to the correct path
 volumes:
   wp_volume:
     driver: local
